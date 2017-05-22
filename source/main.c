@@ -14,7 +14,7 @@ int main()
     fsInit();
 	
 	     printf("Welcome to the boot11strap installer!\n");
-		 printf("Version 0.1\n");
+		 printf("Version 0.1.1\n");
 		 printf("Created by Kingy, KevinX8 and cheuble\n");
 		 svcSleepThread(2000000000);
 		 printf("Press A to install, or exit this application NOW");
@@ -45,6 +45,7 @@ int main()
 				svcSleepThread(100000000);
 				printf("Shutting down...");
 				cls();
+				printf("ERROR: Failure accessing shutdown script.\n");
 				printf("You may shut down your console.");
 				}
 
