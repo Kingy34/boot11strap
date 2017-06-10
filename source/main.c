@@ -65,6 +65,7 @@ int main()
 				printf("Reboot!\n");
 				printf("If nothing happens, please post in the repo's issues");
 
+				}
 
 		// Flush and swap frame-buffers
 		gfxFlushBuffers();
