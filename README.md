@@ -1,4 +1,4 @@
 # boot11strap
-Latest Release: v0.1.1 (Alpha - 22/05/17)
+Latest Release: v0.2.0 (Alpha - 10/6/17)
 
 This will be able to play Microsoft Windows 10 games such as GOW and Forza Horizon, so make sure to update from A11LH if you want to play these. :^)

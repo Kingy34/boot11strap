@@ -14,10 +14,10 @@ int main()
     fsInit();
 	
 	     printf("Welcome to the boot11strap installer!\n");
-		 printf("Version 0.1.1\n");
+		 printf("Version 0.2.0\n");
 		 printf("Created by Kingy, KevinX8 and cheuble\n");
 		 svcSleepThread(2000000000);
-		 printf("Press A to install, or exit this application NOW");
+		 printf("Press A to install");
 	
 
 	while (aptMainLoop())
@@ -28,33 +28,50 @@ int main()
 
 				if (kDown & KEY_A) {
 				cls();
-				printf("DO NOT SHUTDOWN; BACKING UP IS IN PROGRESS!\n");
-				printf("Backing up System Resources...\n");
+				printf("The installation proccess won't be the fastest thing!\n");
+				printf("Please keep your 3DS powered on and charging!\n\n");
+				svcSleepThread(2000000000);
+				printf("Running 'prep.c'...");
+				svcSleepThread(4000000000);
+				printf("\x1b[32m OK\x1b[0m\n");
+				printf("Output recieved; prep.c completed successfully!\n\n");
+				svcSleepThread(2000000000);
+				printf("Testing...\n\n");
 				svcSleepThread(10000000000);
-				printf("ERROR: Could not read/write to the NAND (Corrupt?)\n");
-				printf("Continuing without backup...\n");
-				printf("Complete.\n");
+				printf("NAND r/w access... ");
+				printf("\x1b[32m OK\x1b[0m\n");
+				printf("SD Card health... ");
+				printf("\x1b[32m OK\x1b[0m\n");
+				printf("Payload files... ");
+				printf("\x1b[32m OK\x1b[0m\n");
+				printf(".conf... ");
+				printf("\x1b[32m OK\x1b[0m\n");
+				printf("3DS health... ");
+				printf("\x1b[32m OK\x1b[0m\n");
+				printf("prep files... ");
+				printf("\x1b[32m OK\x1b[0m\n");
+				printf("Sectors... ");
+				printf("\x1b[32m OK\x1b[0m\n");
+				printf("bootrom... ");
+				printf("\x1b[32m OK\x1b[0m\n\n");
+				printf("\x1b[32mReady!\x1b[0m\n");
+				printf("Please run 'make' to build 'boot11strap'\n\n");
 				svcSleepThread(2000000000);
-				printf("Installing boot11strap...\n");
-				svcSleepThread(2000000000);
-				printf("Install complete!\n");
-				printf("Writing changes to NAND...\n\n");
-				svcSleepThread(200000000);
-				printf("Done!\n");
-				printf("Success code: 'A9LH=B9S'\n");
-				svcSleepThread(100000000);
-				printf("Shutting down...");
-				cls();
-				printf("ERROR: Failure accessing shutdown script.\n");
-				printf("You may shut down your console.");
-				}
+				printf("Building boot11strap...\n");
+				printf("This might take a while!\n\n");
+				svcSleepThread(40000000000);
+				printf("[ERROR] could not log output.\n");
+				printf("\x1b[32mInstallation Successfull!\x1b[0m\n\n");
+				printf("Reboot!\n");
+				printf("If nothing happens, please post in the repo's issues");
+
 
 		// Flush and swap frame-buffers
 		gfxFlushBuffers();
 		gfxSwapBuffers();
 		gspWaitForVBlank();
 	}
-
+	
 	gfxExit();
 	aptExit();
 	fsExit();
