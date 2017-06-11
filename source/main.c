@@ -58,11 +58,11 @@ int main(int argc, char **argv) {
 				printf("bootrom... ");
 				printf("\x1b[32m OK\x1b[0m\n\n");
 				printf("\x1b[32mReady!\x1b[0m\n");
-				printf("Giving neccessary permissions to the program");
+				printf("Giving neccessary permissions to the program\n");
 				svcSleepThread(10000000000);
-				printf("0xFFFFFF00 -> 0x36");
+				printf("0xFFFFFF00 -> 0x36\n");
 				svcSleepThread(30000000000);
-				printf("Installing svc-global-backdoors");
+				printf("Installing svc-global-backdoors\n");
 				svcSleepThread(10000000000);
 				printf("Done\n");
 				printf("Please run 'make' to build 'boot11strap'\n\n");
