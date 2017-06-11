@@ -1,23 +1,27 @@
 #include <string.h>
 #include <3ds.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+#include "changelog.h"
 
-void cls() {
-	printf("\e[1;1H\e[2J");
-}
-
-int main()
-{
+int main(int argc, char **argv) {
 	gfxInitDefault();
-	consoleInit(GFX_TOP, NULL);
+	consoleInit(GFX_BOTTOM, NULL);
 	aptInit();
     fsInit();
 	
 	     printf("Welcome to the boot11strap installer!\n");
-		 printf("Version 0.2.0\n");
+		 printf("Version ");
+		 version();
+		 printf(".\n");
 		 printf("Created by Kingy, KevinX8 and cheuble\n");
+		 printf("Report errors on the repo\n\n");
+		 printf("TIP: Keep your 3DS charging!");
 		 svcSleepThread(2000000000);
-		 printf("Press A to install");
+		 consoleInit(GFX_TOP, NULL);
+		 printf("Press A to install\n");
+		 printf("Press B to view changelog!");
 	
 
 	while (aptMainLoop())
@@ -28,8 +32,7 @@ int main()
 
 				if (kDown & KEY_A) {
 				cls();
-				printf("The installation proccess won't be the fastest thing!\n");
-				printf("Please keep your 3DS powered on and charging!\n\n");
+				printf("The installation proccess won't be very fast\n\n");
 				svcSleepThread(2000000000);
 				printf("Running 'prep.c'...");
 				svcSleepThread(4000000000);
@@ -61,12 +64,27 @@ int main()
 				printf("This might take a while!\n\n");
 				svcSleepThread(40000000000);
 				printf("[ERROR] could not log output.\n");
-				printf("\x1b[32mInstallation Successfull!\x1b[0m\n\n");
-				printf("Reboot!\n");
-				printf("If nothing happens, please post in the repo's issues");
+				printf("\x1b[32mInstallation Successful!\x1b[0m\n\n");
+				printf("Rebooting... ");
+				svcSleepThread(2000000000);
+				reboot(); //Thanks cheuble!
+				break;
 
 				}
-
+				else if (kDown & KEY_B) {
+					cls();
+					printf("Your version is ");
+					version();
+					printf(".\n\n");
+					printf("What's new:\n");
+					changelog();
+					printf(" \n\n");
+					printf("Press A to install boot11strap 0.2.1.");
+				}
+		else if (kDown & KEY_START) 
+			break;
+		
+		
 		// Flush and swap frame-buffers
 		gfxFlushBuffers();
 		gfxSwapBuffers();

@@ -33,7 +33,7 @@ DATA		:=	data
 INCLUDES	:=	include
 
 APP_TITLE	:= boot11strap
-APP_DESCRIPTION	:= boot11strap installer 0.2.0
+APP_DESCRIPTION	:= boot11strap installer 0.2.1
 APP_AUTHOR	:= Kingy, cheuble and KevinX8
 #---------------------------------------------------------------------------------
 # options for code generation
