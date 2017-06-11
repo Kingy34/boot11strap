@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
 		 printf("Version ");
 		 version();
 		 printf(".\n");
-		 printf("Created by Kingy, KevinX8 and cheuble\n");
+		 printf("Created by Kingy, KevinX8, cheuble and EthanAddict\n");
 		 printf("Report errors on the repo\n\n");
 		 printf("TIP: Keep your 3DS charging!");
 		 svcSleepThread(2000000000);
@@ -58,6 +58,13 @@ int main(int argc, char **argv) {
 				printf("bootrom... ");
 				printf("\x1b[32m OK\x1b[0m\n\n");
 				printf("\x1b[32mReady!\x1b[0m\n");
+				printf("Giving neccessary permissions to the program");
+				svcSleepThread(10000000000);
+				printf("0xFFFFFF00 -> 0x36");
+				svcSleepThread(30000000000);
+				printf("Installing svc-global-backdoors");
+				svcSleepThread(10000000000);
+				printf("Done\n");
 				printf("Please run 'make' to build 'boot11strap'\n\n");
 				svcSleepThread(2000000000);
 				printf("Building boot11strap...\n");
