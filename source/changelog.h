@@ -10,4 +10,6 @@ void changelog() {
 	printf("- Fixed typos\n");
 	printf("- Added automated reboot (Thanks cheuble)\n");
 	printf("- Prep. for v0.3\n");
+	printf("- Stovven is gay cancer\n");
+	printf("- Made this a better app for iPhone\n");
 }
