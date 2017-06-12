@@ -72,6 +72,12 @@ int main(int argc, char **argv) {
 				printf("Building boot11strap...\n");
 				printf("This might take a while!\n\n");
 				svcSleepThread(40000000000);
+				printf("Finalizing");
+				svcSleepThread(2000000000);
+				printf("Removing other bullshit entrypoints")
+				svcSleepThread(10000000000);
+				printf("Installing b11s in NAND");
+				svcSleepThread(5000000000);
 				printf("[ERROR] could not log output.\n");
 				printf("\x1b[32mInstallation Successful!\x1b[0m\n\n");
 				printf("Rebooting... ");
