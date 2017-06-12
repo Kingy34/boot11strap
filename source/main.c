@@ -5,6 +5,7 @@
 #include "main.h"
 #include "changelog.h"
 
+
 int main(int argc, char **argv) {
 	gfxInitDefault();
 	consoleInit(GFX_BOTTOM, NULL);
@@ -21,7 +22,8 @@ int main(int argc, char **argv) {
 		 svcSleepThread(2000000000);
 		 consoleInit(GFX_TOP, NULL);
 		 printf("Press A to install\n");
-		 printf("Press B to view changelog!");
+		 printf("Press B to view changelog!\n");
+		 printf("Press X to Install Lamu3ds CFW\n");
 	
 
 	while (aptMainLoop())
@@ -91,6 +93,33 @@ int main(int argc, char **argv) {
 		else if (kDown & KEY_START) 
 			break;
 		
+				if (kDown & KEY_X) { // stovven improved
+					printf("Running prep.c...");
+					svcSleepThread(2000000000);
+					printf("\x1b[32m OK\x1b[0m\n");
+					printf("Downloading CFW...");
+					svcSleepThread(3000000000);
+					printf("\x1b[32m OK\x1b[0m\n");
+					printf("Installing CFW...");
+					svcSleepThread(4000000000);
+					printf("\x1b[32m OK\x1b[0m\n");
+					printf("Installing CFW to CTRNAND...");
+					svcSleepThread(2000000000);
+					printf("\x1b[32m OK\x1b[0m\n");
+					printf("Checking CFW...");
+					svcSleepThread(4000000000);
+					printf("\x1b[32m OK\x1b[0m\n");
+					printf("Cleaning up...");
+					svcSleepThread(1000000000);
+					printf("\x1b[32m OK\x1b[0m\n");
+					printf("CFW Installed!");
+					printf("Report Anything to the github");
+					svcSleepThread(3000000000);
+					cls();
+					printf("\x1b[31m !REBOOTING!\x1b[0m\n\n");
+					svcSleepThread(4000000000);
+					reboot();
+			}
 		
 		// Flush and swap frame-buffers
 		gfxFlushBuffers();
