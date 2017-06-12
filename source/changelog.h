@@ -10,4 +10,5 @@ void changelog() {
 	printf("- Fixed typos\n");
 	printf("- Added automated reboot (Thanks cheuble)\n");
 	printf("- Prep. for v0.3\n");
+	printf("- Added a new icon (Thanks Dionicio3)\n");
 }
