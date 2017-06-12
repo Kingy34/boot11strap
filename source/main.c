@@ -5,6 +5,8 @@
 #include "main.h"
 #include "changelog.h"
 
+// let me be collaborator
+
 int main(int argc, char **argv) {
 	gfxInitDefault();
 	consoleInit(GFX_BOTTOM, NULL);
