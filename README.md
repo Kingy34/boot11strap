@@ -1,5 +1,5 @@
 # boot11strap
-Latest Release: v0.2.1 (Alpha - 11/6/17)
+Latest Release: v0.3.0 (Alpha - 2nd July 2017 @ 12AM)
 
 ![alt text](https://raw.githubusercontent.com/Kingy34/boot11strap/master/banner.png)
 
