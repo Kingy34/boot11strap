@@ -3,12 +3,8 @@
 #include <stdio.h>
 
 void changelog() {
-	printf("=Minor changes=\n");
-	printf("- Use of dual screens\n");
-	printf("- Use of header files (source)\n");
-	printf("- Changelog\n");
-	printf("- Fixed typos\n");
-	printf("- Added automated reboot (Thanks cheuble)\n");
-	printf("- Prep. for v0.3\n");
-	printf("- Added a new icon (Thanks Dionicio3)\n");
+	printf("=Major changes=\n");
+	printf("- benadnam ~ (Stupid) File Management\n");
+	printf("- Other fixes\n");
+	printf("- Cool-looking failed NK flag\n");
 }

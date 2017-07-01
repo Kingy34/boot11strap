@@ -7,7 +7,7 @@ void cls() {
 }
 
 void version() {
-	printf("0.2.1");
+	printf("0.3.0");
 }
 
 void reboot() { //Thanks cheuble!
