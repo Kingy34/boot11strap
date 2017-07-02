@@ -43,5 +43,5 @@
 				svcSleepThread(40000000000);
 				printf("[Success] Logged output! Check your SD card!\n");
 				printf("\x1b[32mInstallation Successful!\x1b[0m\n\n");
-				printf("... "); //Thanks cheuble!
+				printf("Boot11Term has completed the request. ");
 				}

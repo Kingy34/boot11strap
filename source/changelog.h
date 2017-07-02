@@ -3,8 +3,10 @@
 #include <stdio.h>
 
 void changelog() {
-	printf("=Major changes=\n");
-	printf("- benadnam ~ (Stupid) File Management\n");
+	printf("=Major changes=\n\n");
+	printf("- benadnam ~ (Stupid) File Writing\n");
+	printf("- Now using sf2dlib, sfillib and sftdlib\n");
+	printf("- New UI");
 	printf("- Other fixes\n");
-	printf("- Cool-looking failed NK flag\n");
+	
 }
