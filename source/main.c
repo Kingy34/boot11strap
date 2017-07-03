@@ -12,7 +12,6 @@
 #include "install.h"
 #include "changelog.h"
 // Data files
-#include "kp_png.h"
 #include "kim_png.h"
 #include "FreeSans_ttf.h"
 int main(int argc, char **argv) {
@@ -26,7 +25,6 @@ int main(int argc, char **argv) {
 	sftd_init();
 	hidInit();
 	
-	sf2d_texture *tex1 = sfil_load_PNG_buffer(kp_png, SF2D_PLACE_RAM);
 	sf2d_texture *tex2 = sfil_load_PNG_buffer(kim_png, SF2D_PLACE_RAM);
 	sftd_font *font = sftd_load_font_mem(FreeSans_ttf, FreeSans_ttf_size);
 	
@@ -99,7 +97,7 @@ int main(int argc, char **argv) {
 	aptExit();
 	fsExit();
 	sftd_free_font(font);
-	sf2d_free_texture(tex1);
+	sf2d_free_texture(tex2);
 	sftd_fini();
 	sf2d_fini();
 	return 0;
