@@ -13,7 +13,6 @@
 #include "changelog.h"
 // Data files
 #include "kp_png.h"
-#include "kp2_png.h"
 #include "kim_png.h"
 #include "FreeSans_ttf.h"
 int main(int argc, char **argv) {
