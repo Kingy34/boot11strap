@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
 	gfxInitDefault();
 	consoleInit(GFX_BOTTOM, NULL);
 	aptInit();
-    fsInit();
+  	fsInit();
 	sf2d_init();
 	sf2d_set_clear_color(RGBA8(0x40, 0x40, 0x40, 0xFF));
 	sf2d_set_vblank_wait(0);
@@ -31,24 +31,19 @@ int main(int argc, char **argv) {
 	sftd_font *font = sftd_load_font_mem(FreeSans_ttf, FreeSans_ttf_size);
 	
 		sf2d_start_frame(GFX_TOP, GFX_LEFT);
-	
 			sftd_draw_text(font, 10, 10,  RGBA8(255, 0,   0,   255), 28, "boot11strap");
 			sftd_draw_text(font, 10, 40,  RGBA8(255, 0,   0,   255), 12, "Version 0.3 - Developed by:");
 			sftd_draw_text(font, 10, 52,  RGBA8(255, 0,   0,   255), 12, "Kingy, KevinX8 & cheuble");
-		
 		sf2d_end_frame();
 		
-		 sf2d_start_frame(GFX_TOP, GFX_LEFT);
+		sf2d_start_frame(GFX_TOP, GFX_LEFT);
 			sftd_draw_text(font, 10, 180,  RGBA8(0, 255,   0,   255), 14, "Press 'A' to install");
 			sftd_draw_text(font, 10, 200,  RGBA8(0, 0,   255,   255), 14, "Press 'B' to view changelog");
 			sftd_draw_text(font, 10, 220,  RGBA8(255, 0,   0,   255), 14, "Press 'Start' to reboot"); 
-		
 		sf2d_end_frame(); 
 		
 		sf2d_start_frame(GFX_TOP, GFX_LEFT);
-
 			sf2d_draw_texture(tex2, 200, 0);
-		
 		sf2d_end_frame(); 
 		
 		sf2d_swapbuffers();
